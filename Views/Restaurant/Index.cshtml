@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RestaurantProjectMVC.Models.Restaurant>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Restaurants</h2>
+
+<table class="table table-bordered table-responsive">
+    <thead>
+
+        <tr>
+            <th style="border-bottom-color:blueviolet"> Name </th>
+        </tr>
+    </thead>
+
+</table>
+    @*<tbody>*@
+
+
+        @foreach (var item in Model)
+        {
+            <ul>
+                <li><a href="/Restaurant/Details/@item.Id"> @item.Name</a></li>
+                
+            </ul>
+        }
+
+        @*</tbody>*@
+
+
+
+
+
